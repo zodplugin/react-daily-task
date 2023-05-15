@@ -40,6 +40,7 @@ function ExpenseItem(props) {
                 <td>{ props.nama }</td>
                 <td>{ props.nim }</td>
                 <td>{ props.kelas }</td>
+                <td>{ props.angkatan }</td>
             </tr>
         </>
     )

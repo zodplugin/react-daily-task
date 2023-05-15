@@ -12,12 +12,16 @@ const mahasiswaDUMMY = [
     nama: 'Muhammad Fadhlan Aqila',
     nim: '50420186',
     kelas: '3IA01',
+    angkatan : '2020'
   }
 ]
 
 function App() {
 
   const [data, setData] = useState(mahasiswaDUMMY)
+  const [filterData, setFilterData] = useState([])
+  const [trigger,setTrigger] = useState(false) 
+
 
   const addDataHandler = (data) => {
     setData((prevData) => {
@@ -25,25 +29,38 @@ function App() {
     })
   }
 
+  const filterDataHandler = (angkatan) => {
+    let filterData = data.filter(e => {
+      return angkatan === e.angkatan
+    })
+    
+    setFilterData(filterData)
+    setTrigger(angkatan === '0')
+  }
+
+
   return (
     <div className="text-center" style={{marginTop:"100px"}}>
       <Container>
         <h2>Mahasiswa</h2>
-        <FormData onAddData={addDataHandler} />
+        <FormData onAddData={addDataHandler} onFilterData={filterDataHandler} />
         <Table striped bordered hover>
             <thead>
                 <tr>
                     <th>Nama</th>
                     <th>Nim</th>
                     <th>Kelas</th>
+                    <th>Angkatan</th>
                 </tr>
             </thead>
             <tbody>
-                {data.map(e => {
-                  return (
-                    <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas}/>
-                    )
-                })}
+                {(!trigger) ? filterData.map((e) => {
+                  return <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas} angkatan={e.angkatan}/>
+                }) : data.map((e) => {
+                  return <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas} angkatan={e.angkatan}/>
+                })
+
+                }
             </tbody>
         </Table>
         
