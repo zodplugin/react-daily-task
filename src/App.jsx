@@ -42,24 +42,27 @@ function App() {
   return (
     <div className="text-center" style={{marginTop:"100px"}}>
       <Container>
-        <h2>Mahasiswa</h2>
+        <h2>Mahasiswa Tadika Mesra</h2>
         <FormData onAddData={addDataHandler} onFilterData={filterDataHandler} />
         <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th>Nama</th>
-                    <th>Nim</th>
-                    <th>Kelas</th>
-                    <th>Angkatan</th>
+                    <th width={'20%'}>Nama</th>
+                    <th width={'20%'}>Nim</th>
+                    <th width={'20%'}>Kelas</th>
+                    <th width={'20%'}>Angkatan</th>
                 </tr>
             </thead>
             <tbody>
-                {(!trigger) ? filterData.map((e) => {
-                  return <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas} angkatan={e.angkatan}/>
-                }) : data.map((e) => {
-                  return <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas} angkatan={e.angkatan}/>
-                })
-
+                {filterData.length === 0 ? 
+                  (trigger) ? data.map((e) => {
+                    return <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas} angkatan={e.angkatan}/>
+                  }) :  <tr>
+                            <td colspan={4}>Data tidak ditemukan</td>
+                        </tr>
+                  : filterData.map((e) => {
+                    return <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas} angkatan={e.angkatan}/>
+                  })
                 }
             </tbody>
         </Table>
