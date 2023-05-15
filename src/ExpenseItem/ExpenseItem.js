@@ -8,8 +8,7 @@ import { Row,Col, Button } from 'react-bootstrap';
 function ExpenseItem(props) {
     const [title, setTitle] = useState(props.title)
 
-    // console.log(title)
-    // console.log(title)
+
     const expenseDate = new Date(2023, 5, 10);
     const expenseTitle = 'Car Priceeeeeeee';
     const expenseAmount = 20.000;
@@ -27,20 +26,18 @@ function ExpenseItem(props) {
         return result;
     }
 
-    // let title = props.title
-    const clickHandler = () =>{ 
-        console.log('ini di click')
-        setTitle(!title)
-    }
+
         
     return (
 
         <>
-            <tr className='expense-item__table'>
+            <tr>
                 <td>{ props.nama }</td>
                 <td>{ props.nim }</td>
                 <td>{ props.kelas }</td>
+                <td>{ props.mahasiswa }</td>
                 <td>{ props.angkatan }</td>
+                <td><Button variant="danger" onClick={() => {props.deleteAction(props.nim)}}>Delete</Button></td>
             </tr>
         </>
     )
