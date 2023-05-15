@@ -5,6 +5,7 @@ import ExpenseItem from './components/ExpenseItem/ExpenseItem';
 import FormData from './components/FormData/FormData';
 import { Container,Image,Table } from 'react-bootstrap';
 import { useState } from 'react';
+import { Card } from 'react-bootstrap';
 
 
 const mahasiswaDUMMY = [
@@ -42,10 +43,12 @@ function App() {
   return (
     <div className="text-center" style={{marginTop:"100px"}}>
       <Container>
-        <h2>Mahasiswa Tadika Mesra</h2>
-        <FormData onAddData={addDataHandler} onFilterData={filterDataHandler} />
+      <h2>Mahasiswa Tadika Mesra</h2>
+      <Card>
+      <Card.Body className='App-card'>
+      <FormData onAddData={addDataHandler} onFilterData={filterDataHandler} />
         <Table striped bordered hover>
-            <thead>
+            <thead className='App-thead'>
                 <tr>
                     <th width={'20%'}>Nama</th>
                     <th width={'20%'}>Nim</th>
@@ -57,7 +60,7 @@ function App() {
                 {filterData.length === 0 ? 
                   (trigger) ? data.map((e) => {
                     return <ExpenseItem nama={e.nama} nim={e.nim} kelas={e.kelas} angkatan={e.angkatan}/>
-                  }) :  <tr>
+                  }) :  <tr className='App-tr-notfound'>
                             <td colspan={4}>Data tidak ditemukan</td>
                         </tr>
                   : filterData.map((e) => {
@@ -66,8 +69,8 @@ function App() {
                 }
             </tbody>
         </Table>
-        
-        
+      </Card.Body>
+      </Card>
       </Container>
     </div>
   );

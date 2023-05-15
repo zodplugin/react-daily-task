@@ -1,5 +1,6 @@
-.App {
+html, body, body > div, .App {
   text-align: center;
+  background-color: #87CEEB;
 }
 
 .App-logo {
@@ -26,6 +27,19 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-thead {
+  background-color: #FFF8DC;
+}
+
+.App-tr-notfound {
+  background-color: #F5F5DC;
+}
+
+.App-card {
+  background-color: #E0FFFF;
+  border-radius: 10px;
 }
 
 @keyframes App-logo-spin {

@@ -36,7 +36,7 @@ function ExpenseItem(props) {
     return (
 
         <>
-            <tr>
+            <tr className='expense-item__table'>
                 <td>{ props.nama }</td>
                 <td>{ props.nim }</td>
                 <td>{ props.kelas }</td>

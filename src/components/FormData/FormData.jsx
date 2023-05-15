@@ -62,21 +62,20 @@ function FormData(props){
   
     return (
         <>
-            <Container className="my-5 py-5 bg-secondary">
+            {/* <Container className="my-5 py-2 bg-secondary"> */}
                 <Stack direction="horizontal" >
-                    <h2 className="text-white">Action </h2>
-                    <Form.Select className="ms-auto mx-2" onChange={filterHandler} style={{ width:'30vw' }} aria-label="Default select example">
+                    <Form.Select className="ms-auto mx-2 mb-2" onChange={filterHandler} style={{ width:'30vw' }} aria-label="Default select example">
                         <option value="0">Filter Pilih Tahun</option>
                         <option value="2020">2020</option>
                         <option value="2021">2021</option>
                         <option value="2022">2022</option>
                         <option value="2023">2023</option>
                     </Form.Select>
-                    <Button variant="primary" onClick={handleShow}>
+                    <Button variant="primary" onClick={handleShow} className='mb-2'>
                         Tambah Data
                     </Button>
                 </Stack>
-            </Container>
+            {/* </Container> */}
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
