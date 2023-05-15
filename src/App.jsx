@@ -14,6 +14,24 @@ const mahasiswaDUMMY = [
     nim: '50420186',
     kelas: '3IA01',
     angkatan : '2020'
+  },
+  {
+    nama: 'Kenny Linardi Lim',
+    nim: '2012500',
+    kelas: '2AI23',
+    angkatan : '2021'
+  },
+  {
+    nama: 'Oryza Amaliatuz Zahra',
+    nim: '5138143',
+    kelas: '1JN55',
+    angkatan: '2022'
+  },
+  {
+    nama: 'Shifly Inner Beauty',
+    nim: '693814',
+    kelas: '6QO94',
+    angkatan: '2023'
   }
 ]
 
