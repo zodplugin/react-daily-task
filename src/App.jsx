@@ -44,7 +44,7 @@ function App() {
     <div className="text-center" style={{marginTop:"100px"}}>
       <Container>
       <h2 className='App-title'>Mahasiswa Tadika Mesra</h2>
-      <Card>
+      <Card >
       <Card.Body className='App-card'>
       <FormData onAddData={addDataHandler} onFilterData={filterDataHandler} />
         <Table striped bordered hover>
