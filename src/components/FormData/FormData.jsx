@@ -62,7 +62,7 @@ function FormData(props){
   
     return (
         <>
-            {/* <Container className="my-5 py-2 bg-secondary"> */}
+            <Container>
                 <Stack direction="horizontal" >
                     <Form.Select className="ms-auto mx-2 mb-2" onChange={filterHandler} style={{ width:'30vw' }} aria-label="Default select example">
                         <option value="0">Filter Pilih Tahun</option>
@@ -75,7 +75,7 @@ function FormData(props){
                         Tambah Data
                     </Button>
                 </Stack>
-            {/* </Container> */}
+            </Container>
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -102,7 +102,7 @@ function FormData(props){
                             </Form.Text>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Label>Kelas</Form.Label>
+                            <Form.Label>Angkatan</Form.Label>
                             <Form.Select className="ms-auto mx-2" onChange={e => { setAngkatanMahasiswa(e.target.value)}} aria-label="Default select example" required>
                                 <option>Pilih Angkatan</option>
                                 <option value="2020">2020</option>

@@ -1,11 +1,21 @@
 html, body, body > div, .App {
-  text-align: center;
-  background-color: #87CEEB;
+  background-color: #3f3f3f;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.App-title {
+  background-color: #FFFAF0;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -31,10 +41,12 @@ html, body, body > div, .App {
 
 .App-thead {
   background-color: #FFF8DC;
+  border: 1px solid black;
 }
 
 .App-tr-notfound {
   background-color: #F5F5DC;
+  border: 1px solid black
 }
 
 .App-card {

@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="text-center" style={{marginTop:"100px"}}>
       <Container>
-      <h2>Mahasiswa Tadika Mesra</h2>
+      <h2 className='App-title'>Mahasiswa Tadika Mesra</h2>
       <Card>
       <Card.Body className='App-card'>
       <FormData onAddData={addDataHandler} onFilterData={filterDataHandler} />
