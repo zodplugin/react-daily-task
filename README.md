@@ -1,5 +1,6 @@
 # DAILY TASK CHAPTER 6 TEAM 2
-https://i.pinimg.com/originals/29/12/98/29129842108c46684a26c427741db074.gif
+
+![image](https://github.com/zodplugin/react-daily-task/assets/60656929/83a376ba-e652-4e63-bcaf-71037d23e71e)
 
 ## Anggota Kelompok
 1. Brahmasta Bagus
